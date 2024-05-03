@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <form action="Signup.php" method="post">
+      <h1>Sign Up</h1>
+      <div class="input-box">
+        <input type="text" placeholder="Full Name" name="name" required>
+        <i class="fa fa-user"></i>
+      </div>
+      <div class="input-box">
+        <input type="email" placeholder="Email" name="email" required>
+        <i class="fa fa-envelope"></i>
+      </div>
+      <div class="input-box">
+        <input type="password" id="password" placeholder="Password" name="password" required>
+        <i class="fa fa-eye-slash" id="togglePassword"></i>
+      </div>
+      <div class="input-box">
+        <input type="password" id="confirmPassword" placeholder="Confirm Password"  required>
+        <i class="fa fa-eye-slash" id="toggleConfirmPassword"></i>
+      </div>
+
+      <button type="submit" class="btn">Sign Up</button>
+
+      <div class="login-link">
+        <p>Already have an account?</p>
+        <a href="login.html">Login</a>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const togglePassword = document.getElementById('togglePassword');
+    const password = document.getElementById('password');
+
+    togglePassword.addEventListener('click', () => {
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        togglePassword.classList.toggle('fa-eye');
+        togglePassword.classList.toggle('fa-eye-slash');
+    });
+
+    const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+    const confirmPassword = document.getElementById('confirmPassword');
+
+    toggleConfirmPassword.addEventListener('click', () => {
+        const type = confirmPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+        confirmPassword.setAttribute('type', type);
+        toggleConfirmPassword.classList.toggle('fa-eye');
+        toggleConfirmPassword.classList.toggle('fa-eye-slash');
+    });
+  </script>
+
+</body>
+</html>

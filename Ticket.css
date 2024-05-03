@@ -1,0 +1,292 @@
+* {
+    font-family: "SF Pro Display", Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.ticket-container {
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.ticket-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.ticket-logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.ticket-title {
+    font-size: 18px;
+}
+
+.ticket-id {
+    font-size: 14px;
+    color: #666;
+}
+
+.ticket-content {
+    padding: 20px;
+}
+
+.ticket-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.ticket-label {
+    font-size: 14px;
+    color: #333;
+    width: 30%;
+}
+
+.ticket-value {
+    font-size: 14px;
+    color: #333;
+    width: 70%;
+}
+
+.ticket-footer {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #f7f7f7;
+}
+
+.ticket-note {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Seat Selection Popup Styles */
+.seat-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.seat-popup-content {
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.seat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.window-seat {
+    background-color: #f0f0f0;
+}
+
+.aisle-seat {
+    background-color: #d9d9d9;
+}
+
+.seat.selected {
+    background-color: #1abc9c;
+    color: #fff;
+    border-color: #1abc9c;
+}
+/* Add these styles for ticket buttons */
+.ticket-btn {
+    background-color: #eb7907;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.ticket-btn:hover {
+    background-color: #e26104;
+}
+
+.ticket-btn:active {
+    background-color: #febe00;
+}
+
+.ticket-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #ffe100;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-50 {
+    width: 50%;
+}
+
+#seat-map {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.front-indicator {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#bus-seat-map .seat {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    padding: 2px;
+    line-height: 20px;
+    font-size: 10px;
+}
+
+.booking-details {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.booking-details h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.booking-details h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.booking-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.booking-details li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+#legend {
+    margin-top: 20px;
+}
+
+#legend li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#reset-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#checkout-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#checkout-button:hover,
+#reset-btn:hover {
+    opacity: 0.9;
+}
