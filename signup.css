@@ -66,8 +66,12 @@ body {
     color: #fff;
 }
 
+<<<<<<< HEAD
 .input-box .fa.fa-user
  {
+=======
+.input-box .fa.fa-user {
+>>>>>>> 5ae82c333951c542368ee51d97c34a2a9bcab1c7
     right: 20px;
 }
 
@@ -76,8 +80,11 @@ body {
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 5ae82c333951c542368ee51d97c34a2a9bcab1c7
 .wrapper .btn {
     width: 100%;
     height: 45px;

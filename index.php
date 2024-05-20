@@ -3,6 +3,7 @@
 <html>
 
 <head>
+<<<<<<< HEAD
     <style>
         /* Project.css */
 * {
@@ -448,6 +449,10 @@ border: 1px solid black top;
 
     </style>
     <title>Bus4U</title>
+=======
+    <title>Bus4U</title>
+    <link rel="stylesheet" href="Project.css">
+>>>>>>> 5ae82c333951c542368ee51d97c34a2a9bcab1c7
     <!--Google Fonts and Icons-->
     <link
         href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
@@ -490,11 +495,16 @@ border: 1px solid black top;
         <div class="content flex-space">
             <!-- NAVBAR -->
             <div class="logo">
+<<<<<<< HEAD
                 <img src="bus-ticket-logo(rb).png" alt="Logobus" width="80%" height="90%" />
+=======
+                <img src="bus-ticket-logo.png" alt="Logobus" width="80%" height="90%"/>
+>>>>>>> 5ae82c333951c542368ee51d97c34a2a9bcab1c7
                 <!-- logobus.png is the file name try it -->
             </div>
             <div class="navlinks">
                 <ul id="menulist">
+<<<<<<< HEAD
                     <li><a href="index.php">Home</a></li>
 
                     <li><a href="#about">About Us</a></li>
@@ -503,6 +513,17 @@ border: 1px solid black top;
 
                     <li><a href="login.php">Login</a></li>
 
+=======
+                    <li><a href="Project.html">Home</a></li>
+
+                    <li><a href="Project.html">About Us</a></li>
+
+                    <li><a href="signup.html">Signup</a></li>
+
+                    <li><a href="login.html">Login</a></li>
+
+                    <li><i class="fa fa-search"></i></li>
+>>>>>>> 5ae82c333951c542368ee51d97c34a2a9bcab1c7
                     <li><a href="#book" class="primary-btn">BOOK NOW</a></li>
                 </ul>
                 <span class="fa fa-bars"></span>
@@ -538,7 +559,11 @@ border: 1px solid black top;
                         <h1>Explore New Destinations</h1>
                         <p>Discover exciting adventures and scenic routes with our wide range of bus travel options.</p>
                         <div class="flex">
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> 5ae82c333951c542368ee51d97c34a2a9bcab1c7
                         </div>
                     </div>
                 </div>
@@ -548,7 +573,11 @@ border: 1px solid black top;
                         <h1>Comfortable and Convenient Journeys</h1>
                         <p>Experience hassle-free travel with our comfortable buses and convenient booking process.</p>
                         <div class="flex">
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> 5ae82c333951c542368ee51d97c34a2a9bcab1c7
                         </div>
                     </div>
                 </div>
@@ -559,7 +588,11 @@ border: 1px solid black top;
                         <p>Reunite with family and friends or embark on a group adventure with our reliable bus
                             services.</p>
                         <div class="flex">
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> 5ae82c333951c542368ee51d97c34a2a9bcab1c7
                         </div>
                     </div>
                 </div>
@@ -570,7 +603,11 @@ border: 1px solid black top;
                         <p>Your safety is our priority. Travel with peace of mind knowing that we prioritize your
                             well-being.</p>
                         <div class="flex">
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> 5ae82c333951c542368ee51d97c34a2a9bcab1c7
                         </div>
                     </div>
                 </div>
@@ -619,6 +656,7 @@ border: 1px solid black top;
                     <h1>Find <span>Seats</span></h1> <!-- Move the span outside of the h1 tag -->
                 </div>
                 <div class="form">
+<<<<<<< HEAD
                     <?php
                     if (isset($_POST['start'])) {
                         $from = @$_POST['from'];
@@ -662,6 +700,49 @@ border: 1px solid black top;
                         <input type="date" name="date">
                         <input type="submit" name="start" value="Book Now!">
                     </form>
+=======
+                <?php
+    if(isset($_POST['start'])) {
+    $from = @$_POST['from'];
+    $to = @$_POST['to'];
+    $date = @$_POST['date'];
+    $sql = "INSERT INTO `booking`(`id`, `userID`, `from_location`, `to_location`, `date`) VALUES (null,'1','$from','$to','$date')";
+    $query = mysqli_query($conn, $sql);
+    $queryID = mysqli_insert_id($conn);
+    echo "<meta http-equiv=\"refresh\" content=\"0; url=CheckAvailability.php?id=$queryID\">";
+    exit();
+}
+    ?>
+    <form action="index.php" method="POST">
+        From <select name="from">
+            <?php
+            $sql = "SELECT * FROM `locations`";
+            $query = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($query)) {
+                $id = $row['id'];
+                $location = $row['location'];
+                echo "<option value='$location'>$location</option>";
+            }
+            ?>
+        </select>
+        <br />
+        To <select name="to">
+            <?php
+            $sql = "SELECT * FROM `locations`";
+            $query = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($query)) {
+                $id = $row['id'];
+                $location = $row['location'];
+                echo "<option value='$location'>$location</option>";
+            }
+            ?>
+        </select>
+        <br />
+        Date
+        <input type="date" name="date">
+        <input type="submit" name="start" value="Book Now!">
+    </form>
+>>>>>>> 5ae82c333951c542368ee51d97c34a2a9bcab1c7
                 </div>
             </div>
         </div>
@@ -669,7 +750,11 @@ border: 1px solid black top;
 
     </section>
     <!-- ABOUT SECTION -->
+<<<<<<< HEAD
     <section class="about" id="about">
+=======
+    <section class="about">
+>>>>>>> 5ae82c333951c542368ee51d97c34a2a9bcab1c7
         <div class="container-flex">
             <div class="content">
                 <div class="heading">
@@ -693,7 +778,10 @@ border: 1px solid black top;
             </div>
         </div>
     </section>
+<<<<<<< HEAD
     
+=======
+>>>>>>> 5ae82c333951c542368ee51d97c34a2a9bcab1c7
     <section class="footer">
         <div class="footer">
             <p>&copy; 2024 6th Semester Project. All rights reserved.</p>
